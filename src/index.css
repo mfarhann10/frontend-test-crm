@@ -6,7 +6,7 @@
   /* custom theme variable untuk "new-container" */
   --new-container-center: true;
   --new-container-padding: 2rem;
-  --new-container-2xl: 1400px;
+  --new-container-2xl: 1100px;
 }
 
 @layer utilities {
