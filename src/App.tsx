@@ -1,6 +1,7 @@
 import { About } from "./components/About";
 import { Enjoy } from "./components/Enjoy";
 import { Header } from "./components/Header";
+import { Review } from "./components/Review";
 import { Services } from "./components/Services";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <About />
         <Services />
         <Enjoy />
+        <Review />
       </main>
     </div>
   );
