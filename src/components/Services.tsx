@@ -34,7 +34,7 @@ export const Services = () => {
     },
   ];
   return (
-    <section id="categorys" className="new-container mx-auto py-12">
+    <section id="categorys" className="mx-auto py-12">
       <h1
         className="
           font-poppins font-semibold 
@@ -44,7 +44,7 @@ export const Services = () => {
       >
         Our Choices of <span className="text-[#106A64]">Villa Studios</span>
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-[11rem] place-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-35 place-items-center">
         {services.map((item, idx) => (
           <VillaCard
             key={idx}

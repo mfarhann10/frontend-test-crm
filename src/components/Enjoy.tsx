@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 
 export const Enjoy = () => {
   return (
-    <section id="enjoy" className="py-16">
+    <section id="enjoy" className="mx-auto py-16">
       <div className="flex flex-col md:flex-row gap-8">
         {/* Text Column */}
         <div className="flex flex-col space-y-4 md:w-auto">
