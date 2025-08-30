@@ -44,7 +44,7 @@ export const Services = () => {
       >
         Our Choices of <span className="text-[#106A64]">Villa Studios</span>
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-[11rem]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-[11rem] place-items-center">
         {services.map((item, idx) => (
           <VillaCard
             key={idx}
@@ -57,6 +57,11 @@ export const Services = () => {
             price={item.price}
           />
         ))}
+      </div>
+      <div className="flex items-center justify-center">
+        <button className="cursor-pointer mt-7 bg-[#CFE1E04D] text-[#106A64] w-[174px] h-[54px]">
+          Load More
+        </button>
       </div>
     </section>
   );

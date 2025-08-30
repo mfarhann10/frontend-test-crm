@@ -11,17 +11,12 @@
 }
 
 @layer utilities {
-  .new-container {
+    .new-container {
     margin-left: auto;
     margin-right: auto;
     padding-left: var(--new-container-padding);
     padding-right: var(--new-container-padding);
     width: 100%;
-  }
-
-  @media (min-width: 1536px) {
-    .new-container {
-      max-width: var(--new-container-2xl);
-    }
+    max-width: var(--new-container-2xl); /* SELALU max-width */
   }
 }
