@@ -7,6 +7,7 @@
   --new-container-center: true;
   --new-container-padding: 2rem;
   --new-container-2xl: 1100px;
+  --new-container-center: true;
 }
 
 @layer utilities {

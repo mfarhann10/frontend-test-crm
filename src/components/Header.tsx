@@ -58,7 +58,7 @@ export const Header = () => {
           </div>
 
           {/* RIGHT: contact + login */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-end gap-4">
             <a href="contact" className="text-white font-poppins text-base">
               Contact
             </a>

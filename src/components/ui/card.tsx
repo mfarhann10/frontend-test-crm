@@ -1,3 +1,5 @@
+import { Bed, Users } from "lucide-react";
+
 type VillaCardProps = {
   img: string;
   title: string;
@@ -20,13 +22,13 @@ export const VillaCard = ({
   popular,
 }: VillaCardProps) => {
   return (
-    <div className="w-[330px] rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+    <div className="w-[368px] h-[530px] rounded-lg shadow-lg overflow-hidden border border-gray-200 flex flex-col items-center justify-center">
       {/* Image */}
-      <div className="relative">
+      <div className="relative w-full flex justify-center pt-6">
         <img
           src={img}
           alt={title}
-          className="w-[330px] h-[322px] object-cover"
+          className="w-[330px] h-[322px] object-cover mx-auto rounded-lg"
         />
         {popular && (
           <span className="absolute top-2 left-2 bg-[#106A64] text-white text-xs font-medium px-3 py-1 rounded-full">
@@ -36,33 +38,36 @@ export const VillaCard = ({
       </div>
 
       {/* Content */}
-      <div className="p-4 space-y-3">
+      <div className="p-4 space-y-3 flex-1 flex flex-col justify-between pl-6">
         {/* Title */}
         <h2 className="font-poppins font-medium text-[16px] text-[#106A64]">
           {title}
         </h2>
 
-        {/* Facilities */}
-        <p className="font-poppins font-normal text-[14px] text-[#0A0A0A]">
-          {facilities}
-        </p>
+        <div className="flex gap-20">
+          {/* Facilities */}
+          <p className="font-poppins font-normal text-[12px] text-[#0A0A0A] w-[86px] h-[16px]">
+            {facilities}
+          </p>
 
-        {/* Features */}
-        <ul className="list-disc pl-5 space-y-1">
-          {features.map((feature, index) => (
-            <li
-              key={index}
-              className="font-poppins font-normal text-[14px] text-[#0A0A0A]"
-            >
-              {feature}
-            </li>
-          ))}
-        </ul>
+          {/* Features */}
+          <span className="font-poppins font-normal text-[12px] text-[#0A0A0A] w-[161px] h-[32px]">
+            {features.join(", ")}
+          </span>
+        </div>
 
         {/* Beds & Persons */}
-        <div className="flex items-center gap-6 text-[#0A0A0A]">
-          <p className="font-poppins text-sm">{beds}</p>
-          <p className="font-poppins text-sm">{persons}</p>
+        <div className="flex items-center gap-26 text-[#616161]">
+          <div className="flex items-center gap-2">
+            <Bed className="w-4 h-4" />
+            <span className="font-poppins text-sm">{beds}</span>
+          </div>
+
+          {/* Persons */}
+          <div className="flex items-center gap-2">
+            <Users className="w-4 h-4" />
+            <span className="font-poppins text-sm">{persons}</span>
+          </div>
         </div>
 
         {/* Price */}
