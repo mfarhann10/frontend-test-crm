@@ -46,7 +46,7 @@ export const Header = () => {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="block px-4 py-2 font-poppins text-black hover:bg-gray-100"
+                      className="block px-4 py-2 font-poppins text-black hover:bg-gray-100 transition-smooth"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
