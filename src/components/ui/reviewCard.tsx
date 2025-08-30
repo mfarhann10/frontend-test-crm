@@ -7,14 +7,14 @@ type CardProps = {
 
 export const ReviewCard = ({ description, image, name, profession }: CardProps) => {
   return (
-    <div className="w-[368px] h-[240px] bg-white drop-shadow-[2px_4px_15px_rgba(0,0,0,0.08)] p-4 rounded-lg">
+    <div className="w-[368px] h-[240px] bg-white drop-shadow-[2px_4px_15px_rgba(0,0,0,0.08)] p-4 rounded-lg flex flex-col">
       {/* Description */}
-      <p className="font-poppins text-base text-[#0A0A0A] pt-10">
+      <p className="mt-7 font-poppins text-base text-[#0A0A0A]">
         {description}
       </p>
 
       {/* User Info */}
-      <div className="absolute top-[136px] left-4 flex items-center space-x-2 pt-2">
+      <div className="flex items-center space-x-3 mt-auto mb-15">
         <img
           src={image}
           alt={name}
