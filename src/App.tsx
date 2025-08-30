@@ -1,4 +1,5 @@
 import { About } from "./components/About";
+import { Enjoy } from "./components/Enjoy";
 import { Header } from "./components/Header";
 import { Services } from "./components/Services";
 
@@ -9,6 +10,7 @@ function App() {
       <main className="new-container pt-24">
         <About />
         <Services />
+        <Enjoy />
       </main>
     </div>
   );

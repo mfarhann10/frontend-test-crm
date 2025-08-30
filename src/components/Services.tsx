@@ -20,7 +20,7 @@ export const Services = () => {
       beds: "4 bed",
       persons: "4 persons",
       price: "Rp 3.749.000 /night",
-      popular: false,
+      popular: true,
     },
     {
       img: "/kudus.png",
@@ -55,6 +55,7 @@ export const Services = () => {
             beds={item.beds}
             persons={item.persons}
             price={item.price}
+            popular={item.popular}
           />
         ))}
       </div>

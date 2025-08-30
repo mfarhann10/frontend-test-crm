@@ -1,6 +1,6 @@
 export const About = () => {
   return (
-    <section id="about" className="new-container py-16">
+    <section id="about" className="py-16">
       {/* Judul */}
       <h1
         className="

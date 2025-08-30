@@ -1,4 +1,5 @@
 import { Bed, Users } from "lucide-react";
+import clsx from "clsx";
 
 type VillaCardProps = {
   img: string;
@@ -19,10 +20,35 @@ export const VillaCard = ({
   beds,
   persons,
   price,
-  popular,
+  popular = false,
 }: VillaCardProps) => {
+  const cardClasses = clsx(
+    "w-[368px] h-[530px] rounded-lg shadow-lg overflow-hidden border flex flex-col items-center justify-center",
+    {
+      "bg-[#106A64] text-white border-transparent": popular,
+      "bg-white text-black border-gray-200": !popular,
+    }
+  );
+
+  const titleClasses = clsx(
+    "font-poppins font-medium text-[16px]",
+    popular ? "text-white" : "text-[#106A64]"
+  );
+
+  const textClasses = clsx(
+    "font-poppins font-normal text-[12px] ",
+    popular ? "text-white" : "text-[#0A0A0A]"
+  );
+
+  const priceClasses = clsx(
+    "font-poppins font-medium text-[20px]",
+    popular ? "text-white" : "text-[#106A64]"
+  );
+
+  const iconTextColor = popular ? "text-white" : "text-[#616161]";
+
   return (
-    <div className="w-[368px] h-[530px] rounded-lg shadow-lg overflow-hidden border border-gray-200 flex flex-col items-center justify-center">
+    <div className={cardClasses}>
       {/* Image */}
       <div className="relative w-full flex justify-center pt-6">
         <img
@@ -30,34 +56,25 @@ export const VillaCard = ({
           alt={title}
           className="w-[330px] h-[322px] object-cover mx-auto rounded-lg"
         />
-        {popular && (
-          <span className="absolute top-2 left-2 bg-[#106A64] text-white text-xs font-medium px-3 py-1 rounded-full">
-            Popular
-          </span>
-        )}
       </div>
 
       {/* Content */}
       <div className="p-4 space-y-3 flex-1 flex flex-col justify-between pl-6">
         {/* Title */}
-        <h2 className="font-poppins font-medium text-[16px] text-[#106A64]">
-          {title}
-        </h2>
+        <h2 className={titleClasses}>{title}</h2>
 
         <div className="flex gap-20">
           {/* Facilities */}
-          <p className="font-poppins font-normal text-[12px] text-[#0A0A0A] w-[86px] h-[16px]">
-            {facilities}
-          </p>
+          <p className={clsx("w-[86px] h-[16px]", textClasses)}>{facilities}</p>
 
           {/* Features */}
-          <span className="font-poppins font-normal text-[12px] text-[#0A0A0A] w-[161px] h-[32px]">
+          <span className={clsx("w-[161px] h-[32px", textClasses)}>
             {features.join(", ")}
           </span>
         </div>
 
         {/* Beds & Persons */}
-        <div className="flex items-center gap-26 text-[#616161]">
+        <div className={clsx("flex items-center gap-26", iconTextColor)}>
           <div className="flex items-center gap-2">
             <Bed className="w-4 h-4" />
             <span className="font-poppins text-sm">{beds}</span>
@@ -71,9 +88,7 @@ export const VillaCard = ({
         </div>
 
         {/* Price */}
-        <p className="font-poppins font-medium text-[20px] text-[#106A64]">
-          {price}
-        </p>
+        <p className={priceClasses}>{price}</p>
       </div>
     </div>
   );
