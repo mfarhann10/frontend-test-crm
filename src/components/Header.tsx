@@ -9,6 +9,7 @@ export const Header = () => {
   const navigation = [
     { name: "About", href: "#about" },
     { name: "Villa Categorys", href: "#categorys" },
+    { name: "Review", href: "#review" },
     { name: "Gallery", href: "#gallery" },
   ];
 
